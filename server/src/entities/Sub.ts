@@ -14,7 +14,7 @@ export default class Sub extends BaseEntity {
     title: string
 
     @Column({type: 'text', nullable: true})
-    descryption: string
+    description: string
 
     @Column({nullable: true})
     imageUrn: string

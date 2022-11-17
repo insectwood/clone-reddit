@@ -5,6 +5,7 @@ import authRoutes from './routes/auth';
 import subRoutes from './routes/subs';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 
@@ -13,6 +14,7 @@ const origin = "http://localhost:3000";
 
 app.use(express.json());
 app.use(morgan('dev'));
+app.use(cookieParser());
 app.use(cors({
     origin,
     credentials: true
